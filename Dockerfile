@@ -1,6 +1,6 @@
 # NetBox with the netbox-topology-views plugin. Versions move together: the plugin tracks NetBox minor releases.
-ARG NETBOX_VERSION=v4.7.1
-FROM ghcr.io/netbox-community/netbox:${NETBOX_VERSION}
+# The tag is literal so Renovate can bump it (a build ARG hides it from Renovate).
+FROM ghcr.io/netbox-community/netbox:v4.7.1
 COPY plugin_requirements.txt /opt/netbox/
 RUN /usr/local/bin/uv pip install -r /opt/netbox/plugin_requirements.txt
 # The plugin's README asks for this folder (role images live there).

@@ -15,7 +15,7 @@ jobs:
       - name: tag from pinned versions
         id: v
         run: |
-          nb=$(sed -n 's/^ARG NETBOX_VERSION=//p' Dockerfile)
+          nb=$(sed -n 's|^FROM ghcr.io/netbox-community/netbox:||p' Dockerfile)
           pl=$(sed -n 's/^netbox-topology-views==//p' plugin_requirements.txt)
           echo "tag=${nb}-${pl}" >> "$GITHUB_OUTPUT"
       - run: bash test.sh local/netbox-topology:ci
