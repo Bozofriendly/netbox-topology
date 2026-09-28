@@ -19,3 +19,6 @@ PLUGINS_CONFIG = {"netbox_topology_views": {"allow_coordinates_saving": True}}
 ```
 
 Test locally: `bash test.sh`.
+
+> **Archived 2026-09-27.** NetBox was removed from the Strittmanor homelab. The last image stays at
+> `ghcr.io/bozofriendly/netbox-topology:v4.7.1-4.7.0`.
